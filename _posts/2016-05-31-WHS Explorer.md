@@ -5,7 +5,7 @@ date:   2016-05-31 11:20:40 -0400
 conference: "WHS Summit"
 categories: paper
 excerpt: "Explore the World Humanitarian Summit Data and understand the discussed topics and how they are related to keywords on the texts and other variables"
-teaser: "WHS.png"
+teaser: "Main.jpg"
 ---
 
 Explore the World Humanitarian Summit Data and understand the discussed topics and how they are related to keywords on the texts and other variables
