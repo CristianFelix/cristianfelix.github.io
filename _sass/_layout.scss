@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -33,9 +32,9 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: #999;
         line-height: $base-line-height;
-
+        text-transform: uppercase;
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
@@ -178,7 +177,39 @@
 .post-list {
     margin-left: 0;
     list-style: none;
-
+    .post-list-item {
+        position: relative
+    }
+    .post-list-item-conference {
+        position: absolute;
+        top: 20px;
+        padding: 5px;
+        color: white;
+        left: -10px;
+        font-size: 10px;
+        background-color: rgba(100,100,100,0.9)
+    }
+    .post-list-item-teaser {
+        float: left; 
+        width: 250px; 
+        height: 100%; 
+        margin-top: 5px;
+        border: solid 1px #ccc; 
+        @include media-query($on-palm) {
+            float: none; 
+            text-align: center;
+            width: 100%
+        }
+    }
+    
+    
+    .post-list-item-description {
+        margin-left: 270px;
+        @include media-query($on-palm) {
+            margin-left: 0px
+        }
+    }
+    
     > li {
         margin-bottom: $spacing-unit;
     }
@@ -187,11 +218,16 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    text-align: center;
+    font-size: 14px;
+    span {
+        margin-left: 20px
+    }
 }
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
@@ -204,10 +240,11 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 32px;
     letter-spacing: -1px;
     line-height: 1;
-
+    margin-top: 20px;
+    text-align: center; 
     @include media-query($on-laptop) {
         font-size: 36px;
     }
@@ -215,7 +252,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
-
+    text-align: justify;
     h2 {
         font-size: 32px;
 

@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "RevEx: Visual Investigative Journalism with A Million Healthcare Reviews"
+date:   2016-05-27 11:20:40 -0400
+conference: "C+J 2015"
+categories: paper
+excerpt: "A visual analytic platform to help investigative journalists explore large sets of crowd-sourced reviews RevEx uses a combination of faceted search and visualization to single out reviews with a desired combination of parameters and keywords (e.g., reviews with 1 star containing the word \"food\")."
+teaser: "Revex.png"
+---
+
+In this paper, we present, a visual analytic platform to help investigative journalists explore large sets of crowd-sourced reviews. RevEx uses a combination of faceted search and visualization to single out reviews with a desired combination of parameters and keywords (e.g., reviews with 1 star containing the word "food"). We developed this tool in collaboration with ProPublica, an independent non-profit newsroom, to help journalists look into more than one million reviews on healthcare providers from Yelp. The paper describes the main motivation behind the tool, its design rationale, and discoveries made through its use. We also discuss how the same methods can be used to explore other possible data sets and thus support to the development of numerous additional journalistic investigations.

@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post-list-item">
+        <div class="post-list-item-teaser" >
+          <img src="{{ site.url }}/assets/{{post.teaser}}"></img>   
+        </div>
+        {% if post.conference %}
+        <div class="post-list-item-conference">
+            {{post.conference}}
+        </div>
+        {% endif %}
+        <div class="post-list-item-description">
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <div>
+          {{ post.excerpt }}
+          </div>
+        <div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

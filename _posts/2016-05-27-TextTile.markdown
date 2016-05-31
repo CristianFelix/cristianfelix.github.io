@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "TextTile: Interactive text analisys"
+authors:
+    - Cristian Felix
+    - Anshul V. Pandey
+    - Enrico Berini
+date:   2016-05-27 12:20:40 -0400
+
+teaser: "TextTile.png"
+video: "TextTile.mp4"
+
+demo: "http://nyuvis.github.io/texttile/Demo.html?dataset=whs"
+paper: "http://nyuvis.github.io/texttile/Demo.html?dataset=whs"
+sumplement: "http://nyuvis.github.io/texttile/Demo.html?dataset=whs"
+
+conference: "IEEE VIS 2016"
+categories: paper
+excerpt: "TextTile is a data visualization tool for investigation of datasets and questions that require seamless and flexible analysis of structured data and unstructured text. TextTile is based on real-world data analysis problems gathered through our interaction with a number of domain experts and provides a general purpose solution to such problems"
+
+---
+
+In this paper, we present, a visual analytic platform to help investigative journalists explore large sets of crowd-sourced reviews. RevEx uses a combination of faceted search and visualization to single out reviews with a desired combination of parameters and keywords (e.g., reviews with 1 star containing the word "food"). We developed this tool in collaboration with ProPublica, an independent non-profit newsroom, to help journalists look into more than one million reviews on healthcare providers from Yelp. The paper describes the main motivation behind the tool, its design rationale, and discoveries made through its use. We also discuss how the same methods can be used to explore other possible data sets and thus support to the development of numerous additional journalistic investigations.

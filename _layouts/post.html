@@ -2,10 +2,26 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
+    <div class="paper-teaser">
+      {% if page.video %}
+         <video width="100%" controls poster="{{ site.url }}/assets/{{page.teaser}}">
+          <source src="{{ site.url }}/assets/{{page.video}}"  type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      {% else %}
+        <img src="{{ site.url }}/assets/{{page.teaser}}"></img>   
+      {% endif %}    
+    </div>
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta">{% if page.authors %}
+      {% for author in page.authors %}
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ author }}</span>
+      </span>
+      {% endfor %}
+    {% endif %}</p>
+  
   </header>
 
   <div class="post-content" itemprop="articleBody">
