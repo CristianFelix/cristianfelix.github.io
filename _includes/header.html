@@ -1,6 +1,6 @@
-<header class="site-header">
+<header class="site-header" style="padding: 5px">
 
-  <div class="wrapper">
+  <div class="wrapper"  style="border-left: solid 1px #ccc; border-right: solid 1px #ccc;">
 
     <a class="site-title" href="{{ site.baseurl }}/">
       <img width="100" src="{{ site.url }}/assets/logo.png"></img>   
@@ -16,12 +16,19 @@
       </a>
 
       <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
+	      <a class="page-link" href="{{site.baseurl}}/news">NEWS</a>
+        <a class="page-link" href="{{site.baseurl}}/news">PROJECTS</a>
+        <a class="page-link" href="{{site.baseurl}}/news">PUBLICATIONS</a>
+        <a class="page-link" href="{{site.baseurl}}/news">PEOPLE</a>
+        <a class="page-link" href="{{site.baseurl}}/news">ABOUT</a>
       </div>
+
+      <div class="search-box">
+        <form action="/search.html" method="get">
+          <input type="search" id="search-box" placeholder="Search" name="query"><input type="submit" value="go">
+        </form>
+      </div>
+
     </nav>
 
   </div>

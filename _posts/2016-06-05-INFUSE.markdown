@@ -1,0 +1,45 @@
+---
+layout: post
+date:   2014-12-23 12:20:40 -0400
+categories: paper
+
+title: "INFUSE - Interactive Feature Selection for Predictive Modeling of High Dimensional Data"
+authors:
+    - Josua Krause
+    - Adam Perer
+    - Enrico Bertini
+    
+excerpt: INFUSE is a novel visual analytics system designed to help analysts understand how predictive features are being ranked across feature selection algorithms, cross-validation folds, and classifiers.
+
+teaser: "infuse.png"
+conference: IEEE VIS 2014
+
+paper: "http://nyuvis.github.io/infuse/paper.pdf"
+source: "https://github.com/nyuvis/infuse-java/"
+
+---
+# Abstract
+
+Predictive modeling techniques are increasingly being used by data scientists to understand the probability of predicted outcomes. However, for data that is high-dimensional, a critical step in predictive modeling is determining which features should be included in the models. Feature selection algorithms are often used to remove non-informative features from models. However, there are many different classes of feature selection algorithms. Deciding which one to use is problematic as the algorithmic output is often not amenable to user interpretation. This limits the ability for users to utilize their domain expertise during the modeling process. To improve on this limitation, we developed INFUSE, a novel visual analytics system designed to help analysts understand how predictive features are being ranked across feature selection algorithms, cross-validation folds, and classifiers. We demonstrate how our system can lead to important insights in a case study involving clinical researchers predicting patient outcomes from electronic medical records.
+
+<div style="text-align: center; margin-bottom: 20px">
+<iframe src="https://player.vimeo.com/video/114366032?title=0&byline=0&portrait=0" width="800" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+### Cite
+
+```
+@article{infuse,
+  author={Krause, Josua and Perer, Adam and Bertini, Enrico},
+  journal={Visualization and Computer Graphics, {IEEE} Transactions on},
+  title={ {INFUSE:} Interactive Feature Selection for Predictive Modeling of High Dimensional Data},
+  year={2014},
+  month={Dec},
+  volume={20},
+  number={12},
+  pages={1614-1623},
+  keywords={data analysis;data visualisation;pattern classification;INFUSE system;algorithmic output;classifiers;clinical researchers;cross-validation folds;electronic medical records;feature selection algorithms;high dimensional data modeling;interactive feature selection;patient outcomes;predicted outcomes;predictive modeling;predictive modeling techniques;user interpretation;visual analytics system;Algorithm design and analysis;Data models;Data visualization;Feature extraction;Prediction algorithms;Predictive models;Predictive modeling;classification;feature selection;high-dimensional data;visual analytics},
+  doi={10.1109/TVCG.2014.2346482},
+  ISSN={1077-2626}
+}
+```

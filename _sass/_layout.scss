@@ -1,18 +1,40 @@
+.search-box {
+    float: right;
+    margin-top: -35px;
+    line-height: 20px;
+    input[type=search] {
+       border: solid 1px #eee;
+       border-radius: 10px 0px 0px 10px; 
+       padding-left: 10px;
+       padding-right: 10px;
+       width: 150px;
+       outline: none;
+    }
+    input[type=submit] {
+       border: solid 1px #eee;
+       color: white;
+       border-radius: 0px 10px 10px 0px; 
+    }
+}
+
 /**
  * Site header
  */
 .site-header {
     border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-
+    min-height: 46px;
+    box-shadow: 0px 5px 10px #eee;
     // Positioning context for the mobile navigation icon
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255,255,255,0.9)
 }
 
 .site-title {
     font-size: 26px;
     font-weight: 300;
-    line-height: 56px;
+    line-height: 46px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -24,8 +46,8 @@
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+    margin-left: 120px;
+    line-height: 46px;
 
     .menu-icon {
         display: none;
@@ -162,20 +184,41 @@
 }
 
 
-
+.home {
+    position: relative;
+}
 /**
  * Page content
  */
 .page-content {
     padding: $spacing-unit 0;
+    padding-top: 80px;
 }
 
 .page-heading {
     font-size: 20px;
 }
 
+.news-list {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 200px;
+    text-align: right;
+    list-style: none;
+
+    .news-date {
+        font-weight: bold;
+    }
+
+    .news-link {
+        color: black;
+    }
+}
+
 .post-list {
     margin-left: 0;
+    width: 650px;
     list-style: none;
     .post-list-item {
         position: relative
@@ -192,8 +235,9 @@
     .post-list-item-teaser {
         float: left; 
         width: 250px; 
-        height: 100%; 
+        height: 125px; 
         margin-top: 5px;
+        overflow: hidden;
         border: solid 1px #ccc; 
         @include media-query($on-palm) {
             float: none; 
@@ -215,11 +259,15 @@
     }
 }
 
+.post-meta-info a {
+    font-size: 18px;
+}
+
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     span {
         margin-left: 20px
     }

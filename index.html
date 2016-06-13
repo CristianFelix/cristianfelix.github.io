@@ -2,27 +2,127 @@
 layout: default
 ---
 
+<style>
+		.carousel-caption {
+			background-color: rgba(0, 0, 0, 0.6) !important;
+			height: 80px;
+			width: 100%;
+			transform: translate(-176px, 40px);
+      
+		}
+			.carousel-caption div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+		.carousel-caption p {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+			font-size: 18px;
+		}
+
+    .carousel-caption p a{
+      color: white;
+    }
+		
+		.item {
+			height: 180px;
+		}
+		#myCarousel {
+			border: solid 1px #999;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+		.carousel-wrap {
+			margin-bottom: 20px;
+      padding: 0px;
+		}
+	</style>
+  <div class="container carousel-wrap" style="width: 880px">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Wrapper for slides -->
+        {% assign featuredPosts = site.posts | where:"featured", "yes" %}
+				<div class="carousel-inner" role="listbox">
+          {% for post in featuredPosts %}
+            
+            <div class="item {% if forloop.first %}active{% endif %}">
+              <img src="assets/{{post.featuredCover}}" class="image" alt="Chania" width="460" height="345">
+              <div class="carousel-caption">
+                <div>
+                <p>
+                  {% if post.link %}
+                    <a class="news-link" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+                  {% else %}
+                    <a class="news-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  {% endif %}
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+            
+          {% endfor %}
+				</div>
+        
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background: none">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="background: none">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
 <div class="home">
   <ul class="post-list">
     {% for post in site.posts %}
+    {% if post.categories[0] == "paper" %}
       <li class="post-list-item">
         <div class="post-list-item-teaser" >
-          <img src="{{ site.url }}/assets/{{post.teaser}}"></img>   
+          {% if post.teaser %}
+            <img src="/assets/{{post.teaser}}"></img>   
+          {% else %}
+            <img src="/assets/Default.png"></img>
+        {% endif %}
         </div>
         {% if post.conference %}
         <div class="post-list-item-conference">
             {{post.conference}}
         </div>
         {% endif %}
+        
         <div class="post-list-item-description">
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <h2 style="font-size: 16px;">
+            <a  style="font-size: 16px;" class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>
-          <div>
+          <div style="text-align: justify">
           {{ post.excerpt }}
           </div>
         <div>
       </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <ul class="news-list">
+    {% for post in site.posts %}
+    {% if post.categories[0] == "news" %}
+      <li class="post-list-item">
+        <div class="post-list-item-description">
+            <span class="news-date"> {{post.date | date: '%B %d, %Y'}} </span> </br> 
+            {% if post.link %}
+              <a class="news-link" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+            {% else %}
+              <a class="news-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            {% endif %}
+        <div>
+      </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </div>

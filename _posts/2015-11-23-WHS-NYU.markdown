@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "NYU Vis Lab won top honors in two challenges organized by United Nations"
+date:   2015-11-23 12:20:40 -0400
+featured: "yes"
+featuredCover: "nyu-whs-jeremy.jpg" 
+link: "http://engineering.nyu.edu/news/2015/11/23/when-united-nations-puts-call-out-data-pros"
+categories: news
+excerpt: "Graduate student Cristian Felix won top honors in the U.N.’s #VisualizeChange: World Humanitarian Summit Data Challenge. Postdoctoral researcher Jeremy Boy, a graphic designer interested in storytelling through data, triumphed in the U.N. challenge to visualize the deluge of data generated in the race to meet the Millennium Development Goals, which include halving extreme poverty rates, halting the spread of HIV/AIDS, and providing universal primary education"
+---

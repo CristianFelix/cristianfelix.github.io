@@ -3,16 +3,7 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <div class="paper-teaser">
-      {% if page.video %}
-         <video width="100%" controls poster="{{ site.url }}/assets/{{page.teaser}}">
-          <source src="{{ site.url }}/assets/{{page.video}}"  type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      {% else %}
-        <img src="{{ site.url }}/assets/{{page.teaser}}"></img>   
-      {% endif %}    
-    </div>
+   
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">{% if page.authors %}
       {% for author in page.authors %}
@@ -21,11 +12,29 @@ layout: default
       </span>
       {% endfor %}
     {% endif %}</p>
+     <div class="paper-teaser" style="text-align: center">
+      {% if page.video %}
+         <video width="100%" controls poster="{{ site.url }}/assets/{{page.teaser}}">
+          <source src="{{ site.url }}/assets/{{page.video}}"  type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      {% else %}
+        <img src="{{ site.url }}/assets/{{page.teaser}}" style="max-height: 400px;"></img>   
+      {% endif %}    
+    </div>
+    
   
   </header>
-
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+  </div>
+
+  <div>
+      <ul class="post-meta-info">
+        {% if page.paper %}<li><i class="fa fa-file-text-o" aria-hidden="true"></i> <a href="{{page.paper}}" target="_blank"/>Paper</li>{% endif %}
+        {% if page.demo %}<li><i class="fa fa-laptop" aria-hidden="true"></i> <a href="{{page.demo}}" target="_blank"/> Demo</li>{% endif %}
+        {% if page.supplement %}<li><i class="fa fa-book" aria-hidden="true"></i> <a href="{{page.suplement}}" target="_blank"/> Supplement</li>{% endif %}
+      </ul>
   </div>
 
 </article>
